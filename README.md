@@ -1,19 +1,14 @@
-## REVENGE.CSS
+## REVENGE.CSS (french version)
 
-The premise of `revenge.css` is simple: A *CSS bookmarklet* that uses selectors to find bad markup, displaying ugly pink error messages in *comic sans serif* wherever you write bad HTML. If you activate the bookmarklet and the page gets lots of pink blotches, the author has included at least one of the following:
+Le principe de « revenge.css » est simple : un *bookmarklet CSS* qui utilise des sélecteurs pour trouver les mauvaises balises, affichant d'affreux messages d'erreur roses en *Comic Sans Serif* partout où vous écrivez du mauvais HTML. Si vous activez ce bookmarklet et que la page a beaucoup de tâches roses, l'auteur a inclus au moins un des éléments suivants :
 
-* Misplaced &lt;div&gt;s
-* Deprecated elements
-* Malformed hyperlinks
-* Inaccessible forms
-* Empty elements
-* Inaccessible images
-* Missing ARIA landmarks
-* Badly authored sectioning elements
-* Erroneous lists
+* &lt;div&gt;s mal placées
+* Éléments dépréciés
+* Hyperlien malformés
+* Formulaires inaccessibles
+* Éléments vides
+* Images inaccessibles
+* Repères ARIA manquants
+* Éléments de section mal rédigés
+* Listes erronées
 * Obsolete attributes
-
-## Try the bookmarklet
-
-GitHub won't let me use javascript in my README. Pretty sensible. Go to the new <a href="http://heydonworks.com/revenge_css_bookmarklet/">hot pink, skull-festooned demo page</a>.
-
