@@ -152,8 +152,8 @@ button.disabled:not([disabled])::after,
 }
 
 /**
-* Button and hyperlink errors
-----------------------------------------------------------------------
+* Erreur des boutons et liens hypertexte
+* ----------------------------------------------------------------------
 */
 
 a:not([href])::after {
@@ -192,11 +192,11 @@ a:empty:not([aria-label]):not([aria-labelledby])::after,
 button:empty:not([aria-label]):not([aria-labelledby])::after, 
 button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
 a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after {
-	content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important;
+	content: 'Tous les boutons et liens douvent contenir du text, une image avec un texte alternatif ou un libellé ARIA.' !important;
 }
 
 figcaption::after {
-	content: '<figcaption>s must belong to parent <figure>s.' !important;
+	content: '<figcaption> doivent appartenir à un parent <figure>.' !important;
 }
 
 figure figcaption::after {
@@ -210,15 +210,15 @@ figure figcaption::after {
 */
 
 form:not([action])::after {
-	content: 'Forms must have action attributes.' !important;
+	content: 'Les formulaires doivent avoir un attribut action.' !important;
 }
 
 fieldset > *:first-child:not(legend)::after {
-	content: 'Place a legend as the first element in this fieldset.' !important;
+	content: 'Placez une légende comme premier élément de ce fieldset.' !important;
 }
 
 button.disabled:not([disabled]):not([readonly])::after {
-	content: 'Use a disabled or readonly attribute on this button.' !important;
+	content: 'Utilisez un attribut disabled ou readonly sur ce bouton.' !important;
 }
 
 /**
@@ -230,7 +230,7 @@ acronym::after, applet::after, basefont::after, big::after, center::after, dir::
 font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
 plaintext::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
 embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
-	content: 'This element is deprecated, non-standard or obsolete.' !important;
+	content: 'Cet élément est déprécié, non-standard ou obsolète.' !important;
 }
 
 /**
@@ -239,7 +239,7 @@ embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
 */
 
 *:empty:not(script):not(input):not(br):not(img):not(link):not(hr):not(embed):not(area):not(command):not(col):not(param):not(source):not(track):not(wbr):not(base):not(keygen)::after {
-	content: 'This element is empty. Why?' !important;
+	content: 'Cet élément est vide. Pourquoi ?' !important;
 }
 
 /**
@@ -270,20 +270,20 @@ body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="c
 section [role="banner"]::after, section [role="contentinfo"]::after, 
 article [role="banner"]::after, article [role="contentinfo"]::after, 
 aside [role="banner"]::after, aside [role="contentinfo"]::after {
-	content: 'Do not put [role="banner"] or [role="contentinfo"] inside a subsection.' !important;
+	content: "N'ajoutez pas [role="banner"] ou [role="contentinfo"] dans une sous-section." !important;
 }
 
 #main:not(main):not([role="main"])::after {
-    content: 'Use the standard <main> element or role of main.' !important;
+    content: "Utilisez l'élément standard <main> ou un rôle main." !important;
 }
 
 #footer:not(footer):not([role="contentinfo"])::after {
-    content: 'Use the standard <footer> element or contentinfo role' !important;
+    content: "Utilisez l'élément standard <footer> ou un rôle contentinfo." !important;
 }
 
 #header:not(header):not([role="banner"])::after,
 #banner:not(header):not([role="banner"])::after {
-    content: 'Use the standard <header> element or banner role' !important;
+    content: "Utilisez l'élément standard <header> ou un rôle banner." !important;
 }
 
 /**
@@ -292,11 +292,11 @@ aside [role="banner"]::after, aside [role="contentinfo"]::after {
 */
 
 [align]::after, [alink]::after, [background]::after, [bgcolor]::after, [border]::after, [clear]::after, [height]::after, [hspace]::after, [link]::after, [nowrap]::after, [start]::after, [vlink]::after, [vspace]::after {
-	content: 'You are using a deprecated attribute. Use CSS instead.' !important;
+	content: 'Vous utilisez un attribut déprécié. Utilisez CSS à la place.' !important;
 }
 
 script[language]::after {
-	content: 'The language attribute is superceded by type. Use type.' !important;
+	content: "L'attribut langage est remplacé par type. Utilisez type." !important;
 }
 
 table[summary]::after {
@@ -322,14 +322,14 @@ dt + *:not(dd)::after {
 }
 
 /**
-* <div>s in the wrong places
+* <div> au mauvais endroit
 ----------------------------------------------------------------------
 */
 
 abbr div::after, b div::after, i div::after, span div::after, em div::after, 
 strong div::after, small div::after, cite div::after, q div::after, code div::after, 
 label div::after {
-	content: 'Do not put <div>s inside inline elements.' !important;
+	content: "Ne mettez pas de <div> à l'intérieur d'éléments inline." !important;
 }
 
 /**
