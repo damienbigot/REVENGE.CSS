@@ -234,8 +234,8 @@ embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
 }
 
 /**
-* Empty elements
-----------------------------------------------------------------------
+* Éléments vides
+* ----------------------------------------------------------------------
 */
 
 *:empty:not(script):not(input):not(br):not(img):not(link):not(hr):not(embed):not(area):not(command):not(col):not(param):not(source):not(track):not(wbr):not(base):not(keygen)::after {
@@ -243,8 +243,8 @@ embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
 }
 
 /**
-* Sectioning elements, headers and footers
-----------------------------------------------------------------------
+* Élements de section, header et footer
+* ----------------------------------------------------------------------
 */
 
 section > section:first-child::after, 
@@ -270,25 +270,25 @@ body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="c
 section [role="banner"]::after, section [role="contentinfo"]::after, 
 article [role="banner"]::after, article [role="contentinfo"]::after, 
 aside [role="banner"]::after, aside [role="contentinfo"]::after {
-	content: "N'ajoutez pas [role="banner"] ou [role="contentinfo"] dans une sous-section." !important;
+	content: 'N\0027ajoutez pas [role="banner"] ou [role="contentinfo"] dans une sous-section.' !important;
 }
 
 #main:not(main):not([role="main"])::after {
-    content: "Utilisez l'élément standard <main> ou un rôle main." !important;
+    content: 'Utilisez l\0027élément standard <main> ou un rôle main.' !important;
 }
 
 #footer:not(footer):not([role="contentinfo"])::after {
-    content: "Utilisez l'élément standard <footer> ou un rôle contentinfo." !important;
+    content: 'Utilisez l\0027élément standard <footer> ou un rôle contentinfo.' !important;
 }
 
 #header:not(header):not([role="banner"])::after,
 #banner:not(header):not([role="banner"])::after {
-    content: "Utilisez l'élément standard <header> ou un rôle banner." !important;
+    content: 'Utilisez l\0027élément standard <header> ou un rôle banner.' !important;
 }
 
 /**
-* Bad attribute usage
-----------------------------------------------------------------------
+* Mauvais usage des attributs
+* ----------------------------------------------------------------------
 */
 
 [align]::after, [alink]::after, [background]::after, [bgcolor]::after, [border]::after, [clear]::after, [height]::after, [hspace]::after, [link]::after, [nowrap]::after, [start]::after, [vlink]::after, [vspace]::after {
@@ -296,49 +296,49 @@ aside [role="banner"]::after, aside [role="contentinfo"]::after {
 }
 
 script[language]::after {
-	content: "L'attribut langage est remplacé par type. Utilisez type." !important;
+	content: 'L\0027attribut langage est remplacé par type. Utilisez type.' !important;
 }
 
 table[summary]::after {
-	content: 'The summary attribute is deprecated. Perhaps use the <caption> element.' !important;
+	content: 'L\0027attribut summary est déprécié. Utilisez peut-être l\0027élément <caption>.' !important;
 }
 
 /**
-* List errors
-----------------------------------------------------------------------
+* Erreurs des listes
+* ----------------------------------------------------------------------
 */
 
 ol > *:not(li)::after, 
 ul > *:not(li)::after {
-	content: 'Only <li> can be a direct child of <ul> or <ol>.' !important;
+	content: 'Seul <li> peut être un enfant direct de <ul> ou <ol>.' !important;
 }
 
 dl > *:not(dt):not(dd)::after {
-	content: 'This element does not belong directly inside a definition list.' !important;
+	content: 'Cet élément n\0027a pas sa place à l\0027intérieur d\0027une liste de définitions.' !important;
 }
 
 dt + *:not(dd)::after {
-	content: 'Definitions must follow definition titles.' !important;
+	content: 'Les définitions doivent suivre les titres des définitions.' !important;
 }
 
 /**
 * <div> au mauvais endroit
-----------------------------------------------------------------------
+* ----------------------------------------------------------------------
 */
 
 abbr div::after, b div::after, i div::after, span div::after, em div::after, 
 strong div::after, small div::after, cite div::after, q div::after, code div::after, 
 label div::after {
-	content: "Ne mettez pas de <div> à l'intérieur d'éléments inline." !important;
+	content: 'Ne mettez pas de <div> à l\0027intérieur d\0027éléments inline.' !important;
 }
 
 /**
-* Crazy tabindexing
+* Indexation folle des onglets
 ----------------------------------------------------------------------
 */
 
 [tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after {
-	content: 'Do not disrupt the natural tab order.' !important;
+	content: 'Ne pas perturber l\0027ordre naturel des tabulations.' !important;
 }
 
 /* Boot Crap (specific to Twitter BootStrap class misuse)
